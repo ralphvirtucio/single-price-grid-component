@@ -1,0 +1,205 @@
+/* CSS RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* VARIABLES */
+
+:root {
+  --primary-color-1: hsl(179, 62%, 43%);
+  --primary-color-2: hsl(71, 73%, 54%);
+
+  --neutral-color-1: hsl(204, 43%, 93%);
+  --neutral-color-2: hsl(218, 22%, 67%);
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  background-color: var(--neutral-color-2);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* ACCESIBILITY */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.price {
+  display: grid;
+  grid-template-columns: 20% 20%;
+  place-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1024px) {
+  .price {
+    grid-template-columns: 1fr;
+  }
+}
+
+.col--1 {
+  background-color: #fff;
+  grid-column: 1 / 3;
+  padding: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .col--1 {
+    grid-column: auto;
+  }
+}
+
+.col--2 {
+  background-color: rgba(42, 178, 176, 0.85);
+  padding: 2rem;
+  color: #fff;
+}
+.col--3 {
+  background-color: rgba(42, 178, 176, 0.45);
+  padding: 2rem;
+}
+
+.price__heading--1 {
+  color: var(--primary-color-1);
+  margin-bottom: 1.5rem;
+}
+.price__heading--2 {
+  color: var(--neutral-color-1);
+  font-size: 1.25rem;
+  margin-bottom: 0.85rem;
+}
+.price__heading--3 {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.price__promotion-message {
+  color: var(--primary-color-2);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.pricing__info {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.text-col--1 {
+  color: var(--neutral-color-2);
+}
+
+.pricing__per-month {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.pricing__label {
+  color: hsla(203, 44%, 93%, 0.3);
+}
+
+.pricing__message {
+  margin-bottom: 2rem;
+  color: var(--neutral-color-1);
+}
+
+.price--btn {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--primary-color-2);
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.85rem 0;
+  border-radius: 8px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.price__message {
+  color: hsla(203, 44%, 93%, 0.6);
+  padding-right: 2rem;
+}
