@@ -86,7 +86,8 @@ select {
 
 body {
   font-family: 'Karla', sans-serif;
-  background-color: hsl(204, 20%, 90%);
+  /* background-color: hsl(204, 20%, 90%); */
+  background-color: var(--neutral-color-1);
   display: grid;
   place-items: center;
   min-height: 100vh;
