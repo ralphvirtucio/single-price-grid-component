@@ -112,7 +112,7 @@ body {
   place-content: center;
   border-radius: 8px;
   overflow: hidden;
-  max-width: 45%;
+  max-width: 45rem;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -124,7 +124,7 @@ body {
 }
 
 .col {
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .col--1 {
